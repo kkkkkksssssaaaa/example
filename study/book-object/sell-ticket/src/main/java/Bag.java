@@ -1,5 +1,5 @@
 /**
- * ### 1.1 티켓 판매 어플리케이션 구현하기
+ * ### 1.3 설계 개선하기
  *
  * - 관람객의 소지품
  *     - 이벤트 당첨자는 티켓으로 교환할 초대장을 가지고 있다
@@ -23,23 +23,29 @@ public class Bag {
         this.amount = amount;
     }
 
-    public boolean hasInvitation() {
-        return this.invitation != null;
-    }
-    public boolean hasTicket() {
-        return this.ticket != null;
+    public Long hold(Ticket ticket) {
+        if (hasInvitation()) {
+            setTicket(ticket);
+
+            return 0L;
+        } else {
+            setTicket(ticket);
+            minusAmount(ticket.getFee());
+
+            return ticket.getFee();
+        }
     }
 
-    public void setTicket(Ticket ticket) {
+    private boolean hasInvitation() {
+        return this.invitation != null;
+    }
+
+    private void setTicket(Ticket ticket) {
         this.ticket = ticket;
     }
 
-    public void minusAmount(Long amout) {
+    private void minusAmount(Long amout) {
         this.amount -= amout;
-    }
-
-    public void plusAmout(Long amout) {
-        this.amount += amout;
     }
 
 }
