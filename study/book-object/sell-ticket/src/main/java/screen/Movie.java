@@ -34,7 +34,8 @@ public class Movie {
      * - 영화의 예매 금액 계산
      * */
     public Money calculateMovieFee(Screening screening) {
-        return this.fee;
+        return this.fee
+                .minus(discountPolicy.calculateDiscountAmount(screening));
     }
 
 }
