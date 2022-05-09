@@ -29,9 +29,11 @@ public class Movie {
     }
 
     /**
-     * ### 2-2 객체지향 프로그래밍을 향해
+     * ### 2-3 할인 요금 구하기
      *
      * - 영화의 예매 금액 계산
+     * - 예매 금액을 구할 때 영화 클래스에서 직접 제어하는 것이 아닌,
+     *   할인 정책이라는 객체에게 메세지를 보내는 것으로 처리한것이 포인트
      * */
     public Money calculateMovieFee(Screening screening) {
         return this.fee
