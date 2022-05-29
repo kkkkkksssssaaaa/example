@@ -40,4 +40,13 @@ public class Movie {
                 .minus(discountPolicy.calculateDiscountAmount(screening));
     }
 
+    /**
+     * ### 2.5 추상화와 유연성
+     *
+     * - 할인 정책을 변경하기 위한 메서드
+     * */
+    public void changeDiscountPolicy(DiscountPolicy discountPolicy) {
+        this.discountPolicy = discountPolicy;
+    }
+
 }
