@@ -5,7 +5,7 @@ package screen;
  *
  * - 할인 정책이 없는 경우
  * */
-public class NoneDiscountPolicy extends DiscountPolicy {
+public class NoneDefaultDiscountPolicy extends DefaultDiscountPolicy {
 
     @Override
     protected Money getDiscountAmount(Screening screening) {

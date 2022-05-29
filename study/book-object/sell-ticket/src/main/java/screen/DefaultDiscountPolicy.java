@@ -9,11 +9,11 @@ import java.util.List;
  *
  * - `영화의 할인 정책` 을 구현하는 클래스
  * */
-public abstract class DiscountPolicy {
+public abstract class DefaultDiscountPolicy {
 
     private List<DiscountCondition> conditions = new ArrayList<>();
 
-    public DiscountPolicy(DiscountCondition... conditions) {
+    public DefaultDiscountPolicy(DiscountCondition... conditions) {
         this.conditions = Arrays.asList(conditions);
     }
 
