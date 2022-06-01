@@ -33,4 +33,9 @@ class StringCalculatorTest {
         assertEquals(6, cal.add("1,2:3"));
     }
 
+    @Test
+    public void add_custom_구분자() {
+        assertEquals(6, cal.add("//;\n1;2;3"));
+    }
+
 }

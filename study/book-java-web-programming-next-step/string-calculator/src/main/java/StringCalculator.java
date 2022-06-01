@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class StringCalculator {
 
     public int add(String text) {
@@ -13,6 +16,14 @@ public class StringCalculator {
     }
 
     private String[] split(String text) {
+        Matcher m = Pattern.compile("//(.)\n(.*)").matcher(text);
+
+        if (m.find()) {
+            String customDelimeter = m.group(1);
+
+            return m.group(2).split(customDelimeter);
+        }
+
         return text.split(",|:");
     }
 
