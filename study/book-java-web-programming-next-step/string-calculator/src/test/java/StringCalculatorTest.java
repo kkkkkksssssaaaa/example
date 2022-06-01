@@ -13,9 +13,14 @@ class StringCalculatorTest {
     }
 
     @Test
-    public void all_null_또는_빈문자() {
+    public void add_null_또는_빈문자() {
         assertEquals(0, cal.add(null));
         assertEquals(0, cal.add(""));
+    }
+
+    @Test
+    public void add_숫자하나() {
+        assertEquals(1, cal.add("1"));
     }
 
 }

@@ -5,7 +5,7 @@ public class StringCalculator {
             return 0;
         }
 
-        return 0;
+        return Integer.parseInt(text);
     }
 
 }
