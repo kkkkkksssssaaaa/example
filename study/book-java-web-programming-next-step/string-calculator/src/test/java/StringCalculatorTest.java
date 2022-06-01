@@ -38,4 +38,9 @@ class StringCalculatorTest {
         assertEquals(6, cal.add("//;\n1;2;3"));
     }
 
+    @Test
+    public void add_negative() {
+        assertThrows(RuntimeException.class, () -> cal.add("-1,2,3"));
+    }
+
 }
