@@ -5,18 +5,14 @@ public class StringCalculator {
             return 0;
         }
 
-        if (text.contains(",")) {
-            String[] values = text.split(",");
-            int sum = 0;
+        String[] values = text.split(",");
+        int sum = 0;
 
-            for (String value : values) {
-                sum += Integer.parseInt(value);
-            }
-
-            return sum;
+        for (String value : values) {
+            sum += Integer.parseInt(value);
         }
 
-        return Integer.parseInt(text);
+        return sum;
     }
 
 }
