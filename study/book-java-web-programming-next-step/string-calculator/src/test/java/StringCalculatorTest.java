@@ -28,4 +28,9 @@ class StringCalculatorTest {
         assertEquals(3, cal.add("1,2"));
     }
 
+    @Test
+    public void add_쉼표_또는_콜론_구분자() {
+        assertEquals(6, cal.add("1,2:3"));
+    }
+
 }
